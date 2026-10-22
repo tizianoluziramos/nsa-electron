@@ -19,10 +19,10 @@ Package manager is pnpm (`pnpm-lock.yaml`); do not add an npm or yarn lockfile.
 - `index.html` mounts at `#app` (not `#root`) and loads `/src/main.tsx`
 - `src/main.tsx` renders `<App />` and imports `src/index.css`
 - `src/App.tsx` wraps `AuthProvider` around the `react-router-dom` route table: `/` -> `HomePage`, `/login` -> `LoginPage`
-- `src/context/AuthContext.tsx` exposes `AuthProvider`, `AuthContext`, and `useAuth`; authentication only (`POST ${VITE_API_URL}/auth/login` with `{ username, password }`), persists only `token` in `localStorage`, no user/role payload
+- `src/context/AuthContext.tsx` exposes `AuthProvider`, `AuthContext`, and `useAuth`; authentication is handled locally against `src/data/users.json`, persists only `token` in `localStorage`, no user/role payload
 - `src/pages/LoginPage.tsx` renders `src/components/BackgroundImageComponent.tsx`, styled by `src/styles/components/BackgroundImageComponent.module.css`
 - Component styles live in `src/styles/` as CSS Modules
-- `VITE_API_URL` is read through `src/constants/env.ts`; set it in `.env` (see `.env.example`)
+- (No environment variables are required; authentication is handled locally.)
 - `vite.config.ts` registers `@vitejs/plugin-react`
 
 ## TypeScript constraints
