@@ -21,12 +21,12 @@
     },
     "appId": "com.nationalsecurityagency.desktopenvironment",
     "productName": "NSA Desktop",
-    "desktopName": "nsa-desktop",
     "linux": {
       "target": [
         "AppImage"
       ],
       "category": "Utility",
+      "desktopName": "nsa-desktop",
       "syncDesktopName": true
     }
   },
