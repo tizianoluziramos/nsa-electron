@@ -1,0 +1,76 @@
+.menu {
+  position: fixed;
+  left: 0.5rem;
+  bottom: 52px;
+  z-index: 60;
+  box-sizing: border-box;
+  width: min(18rem, calc(100vw - 1rem));
+  max-height: calc(100dvh - 60px);
+  overflow: hidden;
+  border: 1px solid rgba(59, 255, 143, 0.45);
+  background: linear-gradient(180deg, rgba(5, 20, 12, 0.97), rgba(1, 7, 4, 0.98));
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.75),
+    0 0 40px rgba(59, 255, 143, 0.1);
+  color: #d9ffe8;
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+}
+
+.menuInner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 12rem;
+  padding: 1rem;
+}
+
+.title {
+  margin: 0 0 0.75rem;
+  color: #eefff5;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(59, 255, 143, 0.25);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 36px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(59, 255, 143, 0.22);
+  border-radius: 2px;
+  background: rgba(0, 5, 2, 0.6);
+  color: #d9ffe8;
+  font: inherit;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.logout:hover {
+  border-color: rgba(59, 255, 143, 0.45);
+  background: rgba(59, 255, 143, 0.08);
+}
+
+.logoutIcon {
+  color: #3bff8f;
+  font-size: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logout {
+    transition: none;
+  }
+}

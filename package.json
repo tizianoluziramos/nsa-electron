@@ -1,0 +1,45 @@
+{
+  "name": "com.nationalsecurityagency.desktopenvironment",
+  "description": "NSA Desktop Environment",
+  "author": "Tiziano Tomas Luzi Ramos",
+  "main": "electron.cjs",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "desktop": "electron .",
+    "build:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.nationalsecurityagency.desktopenvironment",
+    "productName": "NSA Desktop",
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Utility"
+    }
+  },
+  "dependencies": {
+    "@cursorify/react": "^0.0.43",
+    "ky": "^2.2.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.15.3",
+    "serve": "^14.2.6",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4"
+  }
+}

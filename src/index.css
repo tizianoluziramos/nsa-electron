@@ -1,0 +1,42 @@
+:root {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  touch-action: pan-x pan-y;
+  overscroll-behavior: none;
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+*::selection,
+*::-moz-selection {
+  background: transparent;
+  color: inherit;
+}
+
+*:focus,
+*:focus-visible,
+*:active {
+  outline: none;
+  box-shadow: none;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
