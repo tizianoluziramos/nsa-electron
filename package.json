@@ -6,6 +6,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "desktopName": "nsa-desktop",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -26,7 +27,6 @@
         "AppImage"
       ],
       "category": "Utility",
-      "desktopName": "nsa-desktop",
       "syncDesktopName": true
     }
   },
