@@ -22,6 +22,21 @@
     },
     "appId": "com.nationalsecurityagency.desktopenvironment",
     "productName": "NSA Desktop",
+    "compression": "maximum",
+    "asar": true,
+    "removePackageScripts": true,
+    "npmRebuild": false,
+    "files": [
+      "dist/**/*",
+      "electron.cjs",
+      "preload.cjs",
+      "package.json",
+      "!**/*.ts",
+      "!**/*.map",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,readme.md,*.d.ts}",
+      "!**/node_modules/.bin",
+      "!**/{.eslintrc,.eslintignore,.prettierrc,.editorconfig}"
+    ],
     "linux": {
       "target": [
         "AppImage"
