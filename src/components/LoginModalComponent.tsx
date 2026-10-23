@@ -26,8 +26,8 @@ export function LoginModalComponent() {
     try {
       await login(username.trim(), password);
       navigate("/", { replace: true });
-    } catch (submitError: any) {
-      setError("Error: " + submitError.message);
+    } catch (submitError) {
+      setError(submitError instanceof Error ? submitError.message : "Invalid credentials");
     }
   };
 
